@@ -47,7 +47,14 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
         document.querySelector('.dice').style.display = 'none';
     }
+});
 
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    // add round score to players total score
+    scores[activePlayer] += roundScore;
+
+    // Update the UI
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 })
 
 
